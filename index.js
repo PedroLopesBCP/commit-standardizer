@@ -3,7 +3,7 @@ const childProcessExec = require('child_process').exec;
 const util = require('util');
 const exec = util.promisify(childProcessExec);
 
-let commit = { commitType: '', commitMessage: '', commitReferences: '', pushToOrigin: true };
+let commit = { commitType: '', commitMessage: '', commitReferences: '', pushToOrigin: false };
 
 // Private methods ----------------------------------------------------
 const mountCommit = async () => {
@@ -103,8 +103,11 @@ const commitChangesWithReferences = async (commitObject = { commitType: '', comm
  * Função responsável por retornar o objeto do commit
  */
 const getCommitMessage = async () => {
+  console.log('1',commit.pushToOrigin);
   commit = await mountCommit();
+  console.log('2',commit.pushToOrigin);
   await _commitHandler(commit);
+  console.log('3',commit.pushToOrigin);
   if (commit.pushToOrigin) {
     pushChanges();
   }
