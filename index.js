@@ -108,7 +108,6 @@ const getCommitMessage = async () => {
   if (commit.pushToOrigin) {
     return pushChanges();
   }
-
   console.log('push did not occur');
 }
 
@@ -116,7 +115,6 @@ const getCommitMessage = async () => {
  * Função responsável por enviar as mudanças para o repostitório
  */
 const pushChanges = async () => {
-  
   console.log('push ocurred');
   const branch = await exec('git rev-parse --abbrev-ref HEAD');
   await exec(`git push origin ${branch.stdout}`);
