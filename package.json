@@ -18,7 +18,7 @@
     "standard",
     "semantic"
   ],
-  "author": "pedro.lopes@mv.com.br",
+  "author": "Pedro Lopes",
   "license": "MIT",
   "publishConfig": {
     "registry": "http://192.168.0.84:8081/repository/npm-snapshots/"
