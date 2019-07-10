@@ -6,7 +6,7 @@ const exec = util.promisify(childProcessExec);
 /**
  * Função responsável por montar o objeto com os atributos do commit
  */
-const mountCommit = async () => {
+async function mountCommit() {
   const commitType = await prompts({
     type: 'select',
     name: 'value',
@@ -56,20 +56,20 @@ let commit = {};
 /**
  * Função responsável por enviar as alterações realizadas
  */
-const stageAllChanges = async () => {
+async function stageAllChanges() {
   await exec('git add .');
 }
 /**
  * Função responsável por retornar o objeto do commit
  */
-const getCommitMessage = async () => {
+async function getCommitMessage() {
   commit = await mountCommit();
   return commit;
 }
 /**
  * Função responsável por realizar o commit das alterações
  */
-const commitChanges = async (commitObject) => {
+async function commitChanges(commitObject) {
   let message = '';
   if (commitObject) {
     message = `${commitObject.commitType} ${commitObject.commitMessage}`
@@ -81,14 +81,14 @@ const commitChanges = async (commitObject) => {
 /**
  * Função por realizar o commit referenciando alguns tickets do JIRA
  */
-const commitChangesWithReferences = async () => {
+async function commitChangesWithReferences() {
   const message = `${commit.commitType} ${commit.commitMessage}`
   await exec(`git commit -m "${message}" -m "${commit.commitReferences}"`);
 }
 /**
  * Função responsável por enviar as mudanças para o repostitório
  */
-const pushChanges = async () => {
+async function pushChanges() {
   const branch = await exec('git rev-parse --abbrev-ref HEAD');
   await exec(`git push origin ${branch.stdout}`);
 }
