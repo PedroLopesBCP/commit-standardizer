@@ -103,21 +103,18 @@ const commitChangesWithReferences = async (commitObject = { commitType: '', comm
  * Função responsável por retornar o objeto do commit
  */
 const getCommitMessage = async () => {
-  console.log('1',commit.pushToOrigin);
   commit = await mountCommit();
-  console.log('2',commit.pushToOrigin);
   await _commitHandler(commit);
-  console.log('3',commit.pushToOrigin);
   if (commit.pushToOrigin) {
     pushChanges();
   }
-  console.log(commit.pushToOrigin)
 }
 
 /**
  * Função responsável por enviar as mudanças para o repostitório
  */
 const pushChanges = async () => {
+  console.log('push ocurred');
   const branch = await exec('git rev-parse --abbrev-ref HEAD');
   await exec(`git push origin ${branch.stdout}`);
 }
