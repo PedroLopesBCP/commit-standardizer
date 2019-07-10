@@ -105,10 +105,10 @@ const commitChangesWithReferences = async (commitObject = { commitType: '', comm
 const getCommitMessage = async () => {
   commit = await mountCommit();
   await _commitHandler(commit);
-  console.log(commit.pushToOrigin)
   if (commit.pushToOrigin) {
     pushChanges();
   }
+  console.log(commit.pushToOrigin)
 }
 
 /**
