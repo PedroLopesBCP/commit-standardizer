@@ -1,6 +1,6 @@
 {
   "name": "commit-standardizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A package tha helps you to keep your commit history standardized",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "prebuild": "rm -rf dist/",
     "commit": "node scripts/commit.js",
     "build": "rollup -c",
+    "build:custom": "babel-node ./index.js",
     "generate:docs": "typedoc --mode file --out ./doc ./index.js --allowJs --ignoreCompilerErrors --module commonjs --includeDeclarations --excludeExternals --hideGenerator"
   },
   "files": [
@@ -27,8 +28,6 @@
     "prompts": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-terser": "^5.1.1",
     "typedoc": "^0.14.2"
   }

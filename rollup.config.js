@@ -1,6 +1,5 @@
 import pkg from './package.json';
 import { terser } from "rollup-plugin-terser";
-import babel from 'rollup-plugin-babel';
 export default {
   input: './index.js', // our source file
   output: [
@@ -15,8 +14,5 @@ export default {
   ],
   plugins: [
     terser(),
-    babel({
-      exclude: 'node_modules/**'
-    })
   ]
 };
