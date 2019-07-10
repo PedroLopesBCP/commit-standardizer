@@ -11,7 +11,7 @@
     "generate:docs": "typedoc --mode file --out ./doc ./index.js --allowJs --ignoreCompilerErrors --module commonjs --includeDeclarations --excludeExternals --hideGenerator"
   },
   "files": [
-    "dist/index.js"
+    "dist/bundle.js"
   ],
   "keywords": [
     "commits",
