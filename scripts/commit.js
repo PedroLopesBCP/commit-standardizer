@@ -1,7 +1,7 @@
-const sendToStaging = require('../index').stageAllChanges;
-const getCommit = require('../index').getCommitMessage;
-const commit = require('../index').commitChanges;
-const push = require('../index').pushChanges;
+const sendToStaging = require('../src/index').stageAllChanges;
+const getCommit = require('../src/index').getCommitMessage;
+const commit = require('../src/index').commitChanges;
+const push = require('../src/index').pushChanges;
 
 (async () => {
   await sendToStaging();
