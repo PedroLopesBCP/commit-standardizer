@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'TESTE'",
-    "build": "rm -rf dist/ && rollup -c",
+    "prebuild": "rm -rf dist/",
+    "build": "rollup -c",
     "generate:docs": "typedoc --mode file --out ./doc ./index.js --allowJs --ignoreCompilerErrors --module commonjs --includeDeclarations --excludeExternals --hideGenerator"
   },
   "files": [
