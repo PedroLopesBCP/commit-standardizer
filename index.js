@@ -119,9 +119,9 @@ const pushChanges = async () => {
 }
 
 exports.getCommitMessage = getCommitMessage;
+exports.pushChanges = pushChanges;
 
 /* TODO: Analisar necessidade dentro do fluxo atual
 * exports.commitChangesWithReferences = commitChangesWithReferences;
 * exports.commitChanges = commitChanges;
-* exports.pushChanges = pushChanges;
 */
