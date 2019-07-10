@@ -33,7 +33,7 @@ const mountCommit = async () => {
   const commitReferences = await prompts({
     type: 'text',
     name: 'value',
-    message: 'Insira os tickets referenciados separados por vírgula'
+    message: 'Insira as issues que serão referenciadas separadas por vírgula. Ex: SDK-1770, SDK-1771'
   });
 
   const pushToOrigin = await prompts({
