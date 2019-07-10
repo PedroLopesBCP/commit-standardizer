@@ -6,7 +6,8 @@ export default {
   output: [
     {
       file: 'dist/bundle.js',
-      format: 'umd'
+      format: 'umd',
+      name: 'commit-standardizer'
     },
   ],
   external: [
