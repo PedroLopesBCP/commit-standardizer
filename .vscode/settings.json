@@ -1,0 +1,35 @@
+{
+  "todo-tree.tags": [
+    "TODO:",
+    "INFO:",
+    "WAIT:",
+  ],
+  "todo-tree.defaultHighlight": {
+    "background": "transparent",
+    "foreground": "#67C23A",
+    "type": "none"
+  },
+  "todo-tree.customHighlight": {
+    "TODO:": {
+      "type": "text",
+      "foreground": "#F2BD63",
+      "background": "#212121",
+      "icon": "tools",
+    },
+    "WAIT:": {
+      "type": "text",
+      "foreground": "#D640D3",
+      "icon": "watch",
+      "background": "#212121",
+    },
+    "INFO:": {
+      "type": "text",
+      "foreground": "cyan",
+      "icon": "info",
+      "background": "#212121",
+    },
+  },
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
