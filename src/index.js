@@ -17,6 +17,7 @@ async function mountCommit() {
       { title: 'fix: Correção de bugs', value: 'fix:' },
       { title: 'chore: Atividades diversas', value: 'chore:' },
       { title: 'style: Ajustes de estilo', value: 'style:' },
+      { title: 'doc: Atividades referentes a documentação do projeto', value: 'doc:' },
       { title: 'perf: Melhorias de performance', value: 'perf:' },
       { title: 'ci: Alterações referentes integração contínua', value: 'ci:' },
       { title: 'breaking: Refatorações de código sem suporte a versões anteriores', value: 'breaking:' },
