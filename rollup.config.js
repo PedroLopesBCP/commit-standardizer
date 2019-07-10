@@ -1,7 +1,7 @@
 import pkg from './package.json';
 import { terser } from "rollup-plugin-terser";
 export default {
-  input: './src/index.js', // our source file
+  input: './index.js', // our source file
   output: [
     {
       file: 'dist/bundle.js',

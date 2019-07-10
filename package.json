@@ -2,7 +2,7 @@
   "name": "commit-standardizer",
   "version": "1.0.2",
   "description": "A package tha helps you to keep your commit history standardized",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo 'TESTE'",
     "prebuild": "rm -rf dist/",
