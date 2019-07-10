@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo 'TESTE'",
     "prebuild": "rm -rf dist/",
+    "commit": "node scripts/commit.js",
     "build": "rollup -c",
     "generate:docs": "typedoc --mode file --out ./doc ./index.js --allowJs --ignoreCompilerErrors --module commonjs --includeDeclarations --excludeExternals --hideGenerator"
   },
