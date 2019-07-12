@@ -4,7 +4,7 @@ export default {
   input: './index.js', // our source file
   output: [
     {
-      file: 'dist/bundle.js',
+      file: 'dist/index.js',
       format: 'umd',
       name: 'commit-standardizer'
     },
