@@ -1,6 +1,6 @@
 {
   "name": "commit-standardizer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A package that helps you to keep your commit history standardized",
   "main": "dist/index.js",
   "scripts": {
