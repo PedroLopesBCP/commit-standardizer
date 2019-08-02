@@ -66,7 +66,7 @@ async function _commitHandler(commitObject) {
   if (commitObject.commitReferences) {
     return commitChangesWithReferences(commitObject);
   }
-  commitChanges(commitObject);
+  return commitChanges(commitObject);
 }
 
 /**
