@@ -10,7 +10,7 @@ const mountCommit = async () => {
   const commitType = await prompts({
     type: 'select',
     name: 'value',
-    message: 'Escolha o tipo de commit',
+    message: 'Choose the commit type',
     choices: [
       { title: 'feat: Addition of new features', value: 'feat:' },
       { title: 'refactor: Changes in the code that are compatible with older versions', value: 'refactor:' },
