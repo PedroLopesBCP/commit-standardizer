@@ -8,12 +8,14 @@
     "test": "echo 'TESTE'",
     "prebuild": "rm -rf dist/",
     "commit": "node scripts/commit.js",
-    "build": "rollup -c",
-    "generate:docs": "typedoc --mode file --out ./doc ./index.js --allowJs --ignoreCompilerErrors --module commonjs --includeDeclarations --excludeExternals --hideGenerator"
+    "build": "rollup -c"
   },
   "files": [
     "dist/index.js"
   ],
+  "repository": {
+    "url": "https://github.com/pedrolopes-ilv/commit-standardizer"
+  },
   "keywords": [
     "commits",
     "standard",
@@ -24,7 +26,6 @@
     "prompts": "^2.1.0"
   },
   "devDependencies": {
-    "rollup-plugin-terser": "^5.1.1",
-    "typedoc": "^0.14.2"
+    "rollup-plugin-terser": "^5.1.1"
   }
 }
