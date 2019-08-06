@@ -10,36 +10,36 @@ const mountCommit = async () => {
   const commitType = await prompts({
     type: 'select',
     name: 'value',
-    message: 'Escolha o tipo de commit',
+    message: 'Choose the commit type',
     choices: [
-      { title: 'feat: Implementação de novas funcionalidades', value: 'feat:' },
-      { title: 'refactor: Refatorações de código com retrocompatibilidade', value: 'refactor:' },
-      { title: 'fix: Correção de bugs', value: 'fix:' },
-      { title: 'chore: Atividades diversas', value: 'chore:' },
-      { title: 'style: Ajustes de estilo', value: 'style:' },
-      { title: 'doc: Atividades referentes a documentação do projeto', value: 'doc:' },
-      { title: 'perf: Melhorias de performance', value: 'perf:' },
-      { title: 'ci: Alterações referentes integração contínua', value: 'ci:' },
-      { title: 'breaking: Refatorações de código sem suporte a versões anteriores', value: 'breaking:' },
+      { title: 'feat: Addition of new features', value: 'feat:' },
+      { title: 'refactor: Changes in the code that are compatible with older versions', value: 'refactor:' },
+      { title: 'fix: Bug fixes', value: 'fix:' },
+      { title: 'chore: Activities that do not fit any category. Ex: bump package version', value: 'chore:' },
+      { title: 'style: Changes in the styling of the application UI', value: 'style:' },
+      { title: 'doc: Documentation changes', value: 'doc:' },
+      { title: 'perf: Activities related to the performace of the appication', value: 'perf:' },
+      { title: 'ci: Activities related do continuous integraton', value: 'ci:' },
+      { title: 'breaking: Changes in the code that are not compatible with older versions', value: 'breaking:' },
     ]
   });
 
   const commitMessage = await prompts({
     type: 'text',
     name: 'value',
-    message: 'Digite a mensagem do commit'
+    message: 'Type in the commit message'
   });
 
   const commitReferences = await prompts({
     type: 'text',
     name: 'value',
-    message: 'Insira as issues que serão referenciadas separadas por vírgula. Ex: SDK-1770, SDK-1771'
+    message: 'Type in the issues referenced by this commit (Optional)'
   });
 
   const pushToOrigin = await prompts({
     type: 'toggle',
     name: 'value',
-    message: 'Enviar as alterações para o repositório remoto?'
+    message: 'Do you want to push the changes to the remote repository?'
   })
 
   let mountedCommit = { commitType: '', commitMessage: '', commitReferences: '', pushToOrigin: true };

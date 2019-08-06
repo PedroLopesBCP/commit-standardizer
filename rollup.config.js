@@ -1,12 +1,12 @@
 import pkg from './package.json';
 import { terser } from "rollup-plugin-terser";
+
 export default {
   input: './index.js', // our source file
   output: [
     {
       file: 'dist/index.js',
-      format: 'umd',
-      name: 'commit-standardizer'
+      format: 'iife',
     },
   ],
   external: [
